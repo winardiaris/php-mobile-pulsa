@@ -1,3 +1,4 @@
 .idea
 .sh
 /vendor/
+test/credentials.php

@@ -1,0 +1,22 @@
+{
+    "name": "winardiaris/php-mobile-pulsa",
+    "description": "PHP wrapper/library for Mobile Pulsa https://mobilepulsa.com/",
+    "type": "library",
+    "require": {
+        "php": ">=5.2.1"
+    },
+    "require-dev": {},
+    "license": "CC-BY-SA-4.0",
+    "authors": [
+        {
+            "name": "Aris Winardi",
+            "email": "ariswinardy@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-0": {
+            "MobilePulsa": "src/"
+        }
+    }
+}
