@@ -1,13 +1,14 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use MobilePulsa\Base as MPBase;
-use MobilePulsa\Config as MPConfig;
+use MobilePulsa\MPBase;
+use MobilePulsa\MPConfig;
 
 MPConfig::$isProduction = false;
-MPConfig::$username = 'databisnis';
-MPConfig::$apiKey = '6205a7971fb2ee67';
-$postpaidPriceListAll = MPBase::getPostPaidPriceList();
-$postpaidPriceListType = MPBase::getPostPaidPriceList('pdam');
+MPConfig::$username = 'YOUR_USERNAME';
+MPConfig::$apiKey = 'YOUR_API_KEY';
 
-var_dump($postpaidPriceListAll);
+$postpaidPriceListAll = MPBase::getPostpaidPriceList();
+$postpaidPriceListType = MPBase::getPostpaidPriceList('bpjs');
+
+var_dump($postpaidPriceListType);

@@ -5,7 +5,7 @@ namespace MobilePulsa;
 /**
  * MobilePulsa Configuration
  */
-class Config
+class MPConfig
 {
 
   /**

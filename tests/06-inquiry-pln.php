@@ -8,6 +8,8 @@ MPConfig::$isProduction = false;
 MPConfig::$username = 'YOUR_USERNAME';
 MPConfig::$apiKey = 'YOUR_API_KEY';
 
-$postpaidPricelistType = MPBase::getPostpaidPriceListType();
+$inquiryPlnPrepaid = MPBase::inquiryPlnPrepaid('12345678901');
+$inquiryPlnPostpaid = MPBase::inquiryPlnPostpaid('530000000001');
 
-var_dump($postpaidPricelistType);
+var_dump($inquiryPlnPrepaid);
+var_dump($inquiryPlnPostpaid);

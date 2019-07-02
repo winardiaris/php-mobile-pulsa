@@ -8,6 +8,6 @@ MPConfig::$isProduction = false;
 MPConfig::$username = 'YOUR_USERNAME';
 MPConfig::$apiKey = 'YOUR_API_KEY';
 
-$postpaidPricelistType = MPBase::getPostpaidPriceListType();
+$inquiryPdam = MPBase::inquiryPdam('PDAMKOTA.SURABAYA', '1013225');
 
-var_dump($postpaidPricelistType);
+var_dump($inquiryPdam);

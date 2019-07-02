@@ -19,6 +19,6 @@ if (!function_exists('json_decode')) {
 }
 
 // Configurations
-require_once('MobilePulsa/Config.php');
+require_once('MobilePulsa/MPConfig.php');
 require_once('MobilePulsa/ApiRequestor.php');
-require_once('MobilePulsa/Base.php');
+require_once('MobilePulsa/MPBase.php');

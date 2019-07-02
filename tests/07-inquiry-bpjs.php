@@ -8,6 +8,6 @@ MPConfig::$isProduction = false;
 MPConfig::$username = 'YOUR_USERNAME';
 MPConfig::$apiKey = 'YOUR_API_KEY';
 
-$postpaidPricelistType = MPBase::getPostpaidPriceListType();
+$inquiryBpjs = MPBase::inquiryBpjs('8801234560001');
 
-var_dump($postpaidPricelistType);
+var_dump($inquiryBpjs);

@@ -42,17 +42,17 @@ class ApiRequestor
             CURLOPT_RETURNTRANSFER => 1,
 
         );
-        // merging with Config::$curlOptions
-        if (count(Config::$curlOptions)) {
+        // merging with MPConfig::$curlOptions
+        if (count(MPConfig::$curlOptions)) {
             // We need to combine headers manually, because it's array and it will no be merged
-            if (Config::$curlOptions[CURLOPT_HTTPHEADER]) {
-                $mergedHeders = array_merge($curl_options[CURLOPT_HTTPHEADER], Config::$curlOptions[CURLOPT_HTTPHEADER]);
+            if (MPConfig::$curlOptions[CURLOPT_HTTPHEADER]) {
+                $mergedHeders = array_merge($curl_options[CURLOPT_HTTPHEADER], MPConfig::$curlOptions[CURLOPT_HTTPHEADER]);
                 $headerOptions = array(CURLOPT_HTTPHEADER => $mergedHeders);
             } else {
                 $mergedHeders = array();
             }
 
-            $curl_options = array_replace_recursive($curl_options, Config::$curlOptions, $headerOptions);
+            $curl_options = array_replace_recursive($curl_options, MPConfig::$curlOptions, $headerOptions);
         }
 
         if ($post) {
@@ -69,7 +69,7 @@ class ApiRequestor
         curl_setopt_array($ch, $curl_options);
 
         $result = curl_exec($ch);
-         curl_close($ch);
+        curl_close($ch);
 
         if ($result === FALSE) {
             throw new Exception('CURL Error: ' . curl_error($ch), curl_errno($ch));

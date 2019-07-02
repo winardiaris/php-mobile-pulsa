@@ -1,15 +1,13 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use MobilePulsa\Base as MPBase;
-use MobilePulsa\Config as MPConfig;
+use MobilePulsa\MPBase;
+use MobilePulsa\MPConfig;
 
 MPConfig::$isProduction = false;
-MPConfig::$username = 'databisnis';
-MPConfig::$apiKey = '6205a7971fb2ee67';
+MPConfig::$username = 'YOUR_USERNAME';
+MPConfig::$apiKey = 'YOUR_API_KEY';
 
-$prepaidPricelistAll = MPBase::getPrepaidPriceList();
-$prepaidPricelistType = MPBase::getPrepaidPriceList('pln');
-$prepaidPricelistTypeOperator = MPBase::getPrepaidPriceList('pulsa','telkomsel');
+$balance = MPBase::getBalance();
 
-var_dump($prepaidPricelistType);
+var_dump($balance);
